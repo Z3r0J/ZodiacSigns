@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModel
 {
-    public class InformationViewModel
+    public class ResultViewModel
     {
-        public string Name { get; set; }
-        public DateTime BirthDate { get; set; }
     }
 }
