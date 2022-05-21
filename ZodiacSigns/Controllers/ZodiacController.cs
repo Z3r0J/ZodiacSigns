@@ -1,4 +1,5 @@
-﻿using Application.ViewModel;
+﻿using Application.Services;
+using Application.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,12 @@ namespace ZodiacSigns.Controllers
     public class ZodiacController : Controller
     {
         private readonly InformationViewModel information;
+        private readonly ZodiacService zodiacService;
 
         public ZodiacController()
         {
             information = new();
+            zodiacService = new();
         }
         public IActionResult Index()
         {
@@ -26,8 +29,9 @@ namespace ZodiacSigns.Controllers
         }
         [HttpPost]
         public IActionResult Result(InformationViewModel vm) {
-
-            return View();
+            var zodiac = zodiacService.GetResult(vm);
+            
+            return View(zodiac);
         }
     }
 }

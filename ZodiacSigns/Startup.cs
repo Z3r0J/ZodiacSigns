@@ -50,7 +50,7 @@ namespace ZodiacSigns
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Zodiac}/{action=Index}/{id?}");
             });
         }
     }

@@ -8,5 +8,8 @@ namespace Application.ViewModel
 {
     public class ResultViewModel
     {
+        public string Name { get; set; }
+        public string ZodiacSign { get; set; }
+        public DateTime BirthDay { get; set; }
     }
 }

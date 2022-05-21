@@ -1,7 +1,18 @@
-﻿
+﻿@model Application.ViewModel.ResultViewModel
 @{
     ViewData["Title"] = "Result";
 }
 
-<h1>Result</h1>
+@if (Model != null)
+{
+    <div class=""></div>
+    <h3>@Model.Name</h3>
+    <h3>@Model.ZodiacSign</h3>
+    <h3>@Model.BirthDay.ToString("dd/MM")</h3>
+    <img src="~/Images/{@Model.ZodiacSign}.png"/>
+}
+else
+{
+    <h1>No Data(s)</h1>
+}
 
