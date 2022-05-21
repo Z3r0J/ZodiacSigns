@@ -5,11 +5,27 @@
 
 @if (Model != null)
 {
-    <div class=""></div>
-    <h3>@Model.Name</h3>
-    <h3>@Model.ZodiacSign</h3>
-    <h3>@Model.BirthDay.ToString("dd/MM")</h3>
-    <img src="~/Images/{@Model.ZodiacSign}.png"/>
+    <div class="d-flex justify-content-center">
+        <ul class="list-group col-4">
+            <li class="list-group-item d-flex justify-content-center list-header">
+                <div class="row">
+                    <div class="col-1 offset-2">
+                        <img src="~/Images/{@Model.ZodiacSign}.png" class="border border-light rounded-pill bubble-color"/>
+                    </div>
+                    <h1>@Model.ZodiacSign</h1>
+                    </div>
+            </li>
+            <li class="list-group-item">
+                <h6>Name:</h6>
+                <h4>@Model.Name</h4>
+            </li>
+            <li class="list-group-item">
+                <h6>Date of Birth:</h6>
+                <h4>@Model.BirthDay.ToString("dd/MM")</h4>
+            </li>
+        </ul>
+    </div>
+
 }
 else
 {

@@ -12,6 +12,18 @@ a {
   color: #0366d6;
 }
 
+.bubble-color {
+    background-color:darkgoldenrod!important;
+}
+.list-header {
+    background-color:burlywood!important;
+}
+.bg-card {
+    font-size: 27px;
+    font-weight: bold;
+    background: #cb995c;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
